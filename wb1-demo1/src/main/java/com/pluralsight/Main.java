@@ -1,7 +1,20 @@
 package com.pluralsight;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        String word1 = "Hello";
+
+        String word2 = "World";
+
+        String greeting;
+
+        greeting = word1 + " " + word2 + "!";
+
+
+        System.out.println(greeting);
+
     }
+
 }
