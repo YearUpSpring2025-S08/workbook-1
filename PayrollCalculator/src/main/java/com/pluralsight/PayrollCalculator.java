@@ -29,18 +29,21 @@ public class PayrollCalculator {
      * @return amount earned during pay period.
      */
     public static double calcGrossPay(float hoursWorked, double payRate){
-        if (hoursWorked <= 40){
-            return hoursWorked * payRate;
-        }
-        else{
+//        if (hoursWorked <= 40){
+//            return hoursWorked * payRate;
+//        }
+//        else{
+//
+//            float overtimeHours = hoursWorked - 40;
+//            double basePay = 40 * payRate;
+//            double overtimeRate = payRate * 1.5;
+//            double overtimePay = overtimeHours * overtimeRate;
+//
+//            return basePay + overtimePay;
+//        }
+        
+        return (hoursWorked > 40) ?  (40 * payRate) + ((hoursWorked - 40) * payRate * 1.5) :  hoursWorked * payRate;
 
-            float overtimeHours = hoursWorked - 40;
-            double basePay = 40 * payRate;
-            double overtimeRate = payRate * 1.5;
-            double overtimePay = overtimeHours * overtimeRate;
-
-            return basePay + overtimePay;
-        }
     }
 
     public static String promptForName(){
@@ -55,9 +58,9 @@ public class PayrollCalculator {
     }
 
     public static double promptForPayRate(){
+
         System.out.print("Please enter the base pay rate: ");
         return scanner.nextDouble();
     }
-
 
 }
