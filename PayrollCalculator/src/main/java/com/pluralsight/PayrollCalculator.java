@@ -20,7 +20,29 @@ public class PayrollCalculator {
 
 
         //Calculate the unknown
-        double grossPay = hoursWorked * payRate;
+        double grossPay;   // = hoursWorked * payRate;
+
+//        if (hoursWorked <= 40){
+//            grossPay = hoursWorked * payRate;
+//        }
+//        else{
+//
+//            float overtimeHours = hoursWorked - 40;
+//            double basePay = 40 * payRate;
+//            double overtimeRate = payRate * 1.5;
+//            double overtimePay = overtimeHours * overtimeRate;
+//
+//            grossPay = basePay + overtimePay;
+//
+//        }
+
+        if (hoursWorked > 40){
+            grossPay = (40 * payRate) + ((hoursWorked - 40) * payRate * 1.5);
+        }
+        else{
+            grossPay = hoursWorked * payRate;
+        }
+
 
 
         //Display the results
