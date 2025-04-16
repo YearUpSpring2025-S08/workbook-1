@@ -41,7 +41,7 @@ public class PayrollCalculator {
 //
 //            return basePay + overtimePay;
 //        }
-        
+
         return (hoursWorked > 40) ?  (40 * payRate) + ((hoursWorked - 40) * payRate * 1.5) :  hoursWorked * payRate;
 
     }
@@ -55,6 +55,9 @@ public class PayrollCalculator {
     public  static float promptForHoursWorked(){
         System.out.print("Please enter the number of hours worked this pay period: ");
         return  scanner.nextFloat();
+
+
+      double area =   Math.PI * Math.pow(radius, 2));
     }
 
     public static double promptForPayRate(){
